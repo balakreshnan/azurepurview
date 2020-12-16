@@ -16,7 +16,7 @@
 
 - First create Azure Purview account in one of the available region
 - Make sure have some open data sets available
-- in my case i used data.gov population dataset
+- In my case I used data.gov population dataset
 - Or save the data set from synapse workspace, which are available as samples
 - Use notebook to save the dataset in parquet format
 - there is a tutorial to create facts and dimension using Azure data factory
@@ -54,6 +54,18 @@
 
 - from the above pictures you can see system scanned and displays the assets
 - Sometimes it takes some time to scan the sources so please be patient
+
+### Scanning Power BI
+
+- Azure Purview allows you to scan your Power BI tenant
+- You can use managed identity authentication to set up a Power BI scan (*Note: You must be a Power BI Administrator to set up the scan*)
+- Setting up managed identity for a Power BI scan is a two-step process:
+
+1. Create a security group and add the catalog's managed identity to it
+2. In the Power BI Admin portal, in the Developer setting for **Allow service principals to use read-only Power BI admin APIs (Preview)**, select **Specific Security Groups** and add your security group with the catalog's managed identity
+
+- After these steps are complete, register your Power BI tenant and set up a scan as you would with other sources
+- More details on scanning Power BI can be found [here](https://docs.microsoft.com/en-us/azure/purview/register-scan-power-bi-tenant)
 
 ## Link Azure Data Factory
 
@@ -130,6 +142,18 @@
 - Classification
 
 ![alt text](https://github.com/balakreshnan/azurepurview/blob/main/images/browseassets9.jpg "Purview")
+
+## Power BI
+- Purview allows you to view the Power BI Reports, Datasets, and Dashboards in your tenant, as well as the workspaces in which they reside
+- Notice how when we browse, we can use the facets to filter our results by Power BI Asset types or particular workspaces
+
+![Power BI](https://github.com/katthoma/Images/blob/master/PurviewPBI1.PNG?raw=true)
+
+- You can also view the Lineage of the Power BI asset from the original data sources used to create the Power BI dataset and any additional reports or dashboards that may be leveraging it today
+
+![Power BI2](https://github.com/katthoma/Images/blob/master/purviewPBI2.PNG)
+
+- For many data sources, you can also choose to **Open in Power BI** which downloads a Power BI Desktop Source (PBDS) file that allows you to open the data source directly in Power BI desktop (given that you have permission to do so)
 
 ## Insights Section
 
