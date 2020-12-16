@@ -93,6 +93,9 @@
 - Now lets look into Azure Data Factory and it's lineage
 - To get lineage populated make sure run the Azure data factory
 - Only when data factory pipeline connected is run the lineage get's populated
+- To create a sample ADF you can use this link
+- https://github.com/balakreshnan/Accenture/blob/master/cap/adfmultijoin.md
+- the above ADF once created and run, below details will get populated
 
 ![alt text](https://github.com/balakreshnan/azurepurview/blob/main/images/browseassets5.jpg "Purview")
 
