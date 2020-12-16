@@ -1,2 +1,2 @@
-# azurepurview
+# Azure Purview
 Azure Purview
