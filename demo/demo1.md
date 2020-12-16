@@ -2,7 +2,7 @@
 
 ## Data Governance lab using Azure Purview
 
-## Prerequistie
+## Prerequisite
 
 - Azure Account
 - Azure blob storage
