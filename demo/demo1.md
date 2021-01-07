@@ -40,6 +40,21 @@
 
 - Configure Azure SQL database as data source
 - Use managed identity
+- use the name of managed identity
+- Log in with SQL management studio or azure portal and go to query explorer
+- select the database and then open query (pls do not run in master database)
+
+```
+CREATE USER [managedidenntityname] FROM EXTERNAL PROVIDER;
+
+GRANT CONTROL ON DATABASE::databasename TO managedidenntityname;
+
+GRANT CONNECT TO managedidenntityname;
+GRANT SELECT TO managedidenntityname;
+GRANT INSERT TO managedidenntityname;
+GRANT ADMINISTER DATABASE BULK OPERATIONS TO managedidenntityname;
+```
+
 - Add the purview user as External provider user in Azure SQL
 - Configure a scan to run 
 
