@@ -45,6 +45,8 @@
 - select the database and then open query (pls do not run in master database)
 
 ```
+use databasename
+
 CREATE USER [managedidenntityname] FROM EXTERNAL PROVIDER;
 
 GRANT CONTROL ON DATABASE::databasename TO managedidenntityname;
