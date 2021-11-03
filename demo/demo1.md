@@ -21,7 +21,7 @@
 - Use notebook to save the dataset in parquet format
 - there is a tutorial to create facts and dimension using Azure data factory
 - here is sample how to create a data set
-- https://github.com/balakreshnan/Accenture/blob/master/cap/populationdataset.md
+- https://github.com/balakreshnan/Samples2021/blob/main/Synapseworkspace/populationdataset.md
 - give proper permission for managed identity to the storage to scan the files in blob storage
 - Give purview managed identity to Azure SQL database and Syanpse (formerly sql dw) permission to access the schema
 
@@ -123,7 +123,7 @@ GRANT ADMINISTER DATABASE BULK OPERATIONS TO managedidenntityname;
 - To get lineage populated make sure run the Azure data factory
 - Only when data factory pipeline connected is run the lineage get's populated
 - To create a sample ADF you can use this link
-- https://github.com/balakreshnan/Accenture/blob/master/cap/adfmultijoin.md
+- https://github.com/balakreshnan/Samples2021/blob/main/Synapseworkspace/adfmultijoin.md
 - the above ADF once created and run, below details will get populated
 
 ![alt text](https://github.com/balakreshnan/azurepurview/blob/main/images/browseassets5.jpg "Purview")
